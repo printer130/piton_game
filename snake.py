@@ -31,7 +31,6 @@ def msg(message, color):
 def game():
   game_over = False
   game_close = False
-  my_list = [1,2,3,4,5,6,7,8,9,123]
 
   x1_change = 0
   y1_change = 0
@@ -85,8 +84,7 @@ def game():
 
     for x in snake_list[:-1]:
       if x == snake_Head:
-        print(x)
-       #game_over = True
+       game_over = True
 
     snake(snake_block, snake_list)
 
