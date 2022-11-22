@@ -1,7 +1,9 @@
 import pygame
 import time
 import random
+
 pygame.init()
+
 white = (255, 255, 255)
 yellow = (255, 255, 102)
 black = (0, 0, 0)
@@ -78,20 +80,19 @@ def game():
     snake_Head.append(y1)
     snake_list.append(snake_Head)
 
-    print(snake_list)
     if len(snake_list) > len_of_snake:
       del snake_list[0]
 
     for x in snake_list[:-1]:
       if x == snake_Head:
-        game_over = True
+        print(x)
+       #game_over = True
 
     snake(snake_block, snake_list)
 
     pygame.display.update()
 
     if x1 == foodx and y1 == foody:
-      #asd
       foodx = round(random.randrange(0, dis_width - snake_block) / 10) * 10
       foody = round(random.randrange(0, dis_width - snake_block) / 10) * 10
       len_of_snake += 1
